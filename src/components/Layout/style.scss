@@ -1,0 +1,38 @@
+
+.site-header {
+  margin: 0 0 7vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1em;
+}
+.site-title {
+  margin: 0;
+  border: solid .2em;
+  font-size: 1em;
+  padding: .5em;
+  line-height: 1;
+  display: inline-block;
+  text-transform: uppercase;
+
+  a {
+    display: block;
+    color: inherit;
+    box-shadow: none;
+    margin-bottom: -.07em;
+  }
+}
+.mobile-menu-toggle {
+  padding: .4em .7em;
+  margin-right: -.7em;
+  border: 0;
+  background: transparent;
+
+  svg {
+    display: block;
+    stroke-width: .2em;
+    stroke-linecap: square;
+    width: 1.5em;
+    height: 1.5em;
+  }
+}
