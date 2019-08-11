@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import { Menu } from "react-feather"
 
 import './style.scss'
-import { rhythm, scale } from "../../utils/typography"
 
 
 export default function Layout( props ) {
@@ -17,8 +16,6 @@ export default function Layout( props ) {
       style={{
         marginLeft: `auto`,
         marginRight: `auto`,
-        maxWidth: rhythm(24),
-        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
 

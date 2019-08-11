@@ -4,7 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/Bio"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
-import { rhythm, scale } from "../utils/typography"
+
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -20,7 +20,6 @@ class BlogPostTemplate extends React.Component {
         />
         <h1
           style={{
-            marginTop: rhythm(1),
             marginBottom: 0,
           }}
         >
@@ -28,19 +27,14 @@ class BlogPostTemplate extends React.Component {
         </h1>
         <p
           style={{
-            ...scale(-1 / 5),
             display: `block`,
-            marginBottom: rhythm(1),
           }}
         >
           {post.frontmatter.date}
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
+        <hr />
+
         <Bio />
 
         <ul
