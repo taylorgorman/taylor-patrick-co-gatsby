@@ -1,14 +1,20 @@
+@import '../../styles/styles';
 
+.site-header,
+.site-footer {
+  margin: $spacer 0;
+}
 .site-header {
-  margin: 0 0 7vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.1em;
+  font-size: 1.25em;
 }
 .site-title {
   margin: 0;
   border: solid .2em;
+  font-family: $font-family-sans-serif;
+  font-weight: 700;
   font-size: 1em;
   padding: .5em;
   line-height: 1;
@@ -18,8 +24,7 @@
   a {
     display: block;
     color: inherit;
-    box-shadow: none;
-    margin-bottom: -.07em;
+    margin-bottom: -.05em;
   }
 }
 .mobile-menu-toggle {
