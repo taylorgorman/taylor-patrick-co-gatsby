@@ -4,34 +4,43 @@ import { Menu } from "react-feather"
 
 import './style.scss'
 import { rhythm, scale } from "../../utils/typography"
-import Header from "../../components/Header"
 
 
-class Layout extends React.Component {
-  render() {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
+export default function Layout( props ) {
 
-    return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
+  const { location, title, children } = props
+  const rootPath = `${__PATH_PREFIX__}/`
 
-        <Header />
-        <main>{children}</main>
+  return (
 
-        <footer>
-          <p>&copy; { new Date().getFullYear() } Taylor Patrick Gorman</p>
-        </footer>
+    <div
+      style={{
+        marginLeft: `auto`,
+        marginRight: `auto`,
+        maxWidth: rhythm(24),
+        padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+      }}
+    >
 
-      </div>
-    )
-  }
+      <header className="site-header">
+        <h1 className="site-title">
+        <Link to={`/`}>
+          TP.Co
+        </Link>
+        </h1>
+        <button className="mobile-menu-toggle">
+          <Menu />
+        </button>
+      </header>
+
+      <main>{children}</main>
+
+      <footer>
+        <p>&copy; { new Date().getFullYear() } Taylor Patrick Gorman</p>
+      </footer>
+
+    </div>
+
+  )
+
 }
-
-export default Layout
