@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { Container } from "react-bootstrap"
 import { Menu } from "react-feather"
 
 import './style.scss'
@@ -12,12 +13,7 @@ export default function Layout( props ) {
 
   return (
 
-    <div
-      style={{
-        marginLeft: `auto`,
-        marginRight: `auto`,
-      }}
-    >
+    <Container>
 
       <header className="site-header">
         <h1 className="site-title">
@@ -32,11 +28,11 @@ export default function Layout( props ) {
 
       <main>{children}</main>
 
-      <footer>
+      <footer className="site-footer">
         <p>&copy; { new Date().getFullYear() } Taylor Patrick Gorman</p>
       </footer>
 
-    </div>
+    </Container>
 
   )
 
