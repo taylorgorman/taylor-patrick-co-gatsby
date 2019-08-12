@@ -1,4 +1,14 @@
-@import 'variables';
-@import '~bootstrap/scss/bootstrap';
-@import 'typography';
-@import 'post';
+@import "start";
+
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/code";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+@import "~bootstrap/scss/utilities";
+
+@import "typography";
+@import "post";

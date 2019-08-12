@@ -9,3 +9,36 @@ p {
 a:hover {
   text-decoration: line-through;
 }
+
+@include media-breakpoint-down(sm) {
+
+  h1, .h1 {
+    font-size: $h1-font-size * .8;
+  }
+  h2, .h2 {
+    font-size: $h2-font-size * .8;
+  }
+  h3, .h3 {
+    font-size: $h3-font-size * .8;
+  }
+  h4, .h4 {
+    font-size: $h4-font-size * .8;
+  }
+
+}
+
+@include media-breakpoint-up(lg) {
+
+  html {
+    font-size: 1.1rem;
+  }
+
+}
+
+@include media-breakpoint-up(xl) {
+
+  html {
+    font-size: 1.2rem;
+  }
+
+}

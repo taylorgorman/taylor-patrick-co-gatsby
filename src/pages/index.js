@@ -1,66 +1,29 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
 
-import Bio from "../components/Bio"
+import "./index.scss"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 
 
-class BlogIndex extends React.Component {
-  render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
+export default function Index( props ) {
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All posts" />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <h3>
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </div>
-          )
-        })}
-      </Layout>
-    )
-  }
+  const statements = [
+    'Writing code and designing interfaces is less about building software and more about studying humans.',
+    'Design isn’t just making things pretty, it’s knowing people so well that you put what they want where they expect it to be right when they need it.',
+    'Start with familiar patterns, add cutting-edge trends, and end with software that gets out of the way so its user can get things done.',
+  ]
+
+  return (
+  <Layout location={ props.location }>
+    <SEO title="All posts" />
+
+    <div className="statement">
+    <p className="h1 text-primary">
+      { statements[Math.floor( Math.random() * statements.length )] }
+    </p>
+    </div>
+
+  </Layout>
+  )
+
 }
-
-export default BlogIndex
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-          }
-        }
-      }
-    }
-  }
-`
