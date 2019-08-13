@@ -21,9 +21,8 @@ export default function Layout( props ) {
         </h1>
       </div>
       <nav className="site-nav">
-        <Link href="/category/design">Design</Link>
-        <Link href="/category/development">Development</Link>
-        <Link href="/category/ux">UX</Link>
+        <Link href="/">Work</Link>
+        <Link href="/">Blog</Link>
       </nav>
       <button className="mobile-menu-toggle hidden-md-up">
         <Menu />

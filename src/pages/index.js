@@ -18,7 +18,7 @@ export default function Index( props ) {
     <SEO title="All posts" />
 
     <div className="statement">
-    <p className="h1 text-primary">
+    <p className="h1">
       { statements[Math.floor( Math.random() * statements.length )] }
     </p>
     </div>

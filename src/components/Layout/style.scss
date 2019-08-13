@@ -1,51 +1,61 @@
 @import '../../styles/styles';
 
-$layout-spacer: 6vmin;
+$layout-spacer: 4vmin;
+$layout-bgcolor-1: mix(adjust-color($primary, $saturation:100, $hue:-10), white, 40);
+$layout-bgcolor-2: mix(adjust-color($primary, $saturation:100, $hue:-90), white, 8);
 
 .layout {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  color: $primary;
+  background: linear-gradient(19deg, $layout-bgcolor-1, $layout-bgcolor-2)
 }
+.layout,
 .site-header,
 .site-content,
 .site-footer {
-  margin: $layout-spacer;
+  padding: $layout-spacer;
 }
 .site-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  min-width: 7em;
-
-  nav {
-    padding: calc(#{$layout-spacer} - .25em) 0;
-
-    a {
-      display: block;
-      padding: .25em 0;
-    }
-  }
+}
+.site-title,
+.site-nav {
+  font-family: $font-family-sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: .75em;
 }
 .site-title {
   margin: 0;
   border: solid .2em;
-  font-family: $font-family-sans-serif;
-  font-weight: 700;
-  font-size: 1.25em;
-  padding: .5em;
-  line-height: 1;
+  padding: .7em .5em;
   display: inline-block;
-  text-transform: uppercase;
 
   a {
     display: block;
+    margin: 0 -.25em 0 .5em;
     color: inherit;
     margin-bottom: -.05em;
   }
 }
 .site-nav {
   display: none;
+
+  &,
+  a {
+    padding-top: .75em;
+    padding-bottom: .75em;
+  }
+  a {
+    display: block;
+    color: inherit;
+  }
 }
 .mobile-menu-toggle {
   padding: .4em .7em;
@@ -71,6 +81,10 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.site-footer {
+  font-family: $font-family-sans-serif;
+  font-size: .75em;
 }
 
 @media (orientation:landscape) {

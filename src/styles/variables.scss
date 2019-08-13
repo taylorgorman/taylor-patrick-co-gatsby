@@ -24,18 +24,18 @@ $spacer: 2rem;
 
 // Typography
 //
-@import url('https://fonts.googleapis.com/css?family=Eczar:600|Merriweather|Rubik:400,400i,500,500i,700');
+@import url('https://fonts.googleapis.com/css?family=Eczar:400,600|Red+Hat+Text:400,700');
 
-$font-family-serif: 'Merriweather', serif;
-$font-family-sans-serif: 'Rubik', sans-serif;
-$font-family-base: $font-family-sans-serif;
+$font-family-serif: 'Eczar', serif;
+$font-family-sans-serif: 'Red Hat Text', sans-serif;
+$font-family-base: $font-family-serif;
 $font-size-base: 1rem;
 
 $line-height-base: 1.7;
 
 $paragraph-margin-bottom: $spacer * .4;
 
-$headings-font-family: 'Eczar', serif;
+//$headings-font-family: 'Eczar', serif;
 $headings-margin-bottom: $spacer / 1rem * .5em;
 
 $h1-font-size: $font-size-base * 2.8;
