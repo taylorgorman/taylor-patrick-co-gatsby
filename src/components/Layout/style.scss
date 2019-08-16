@@ -62,6 +62,7 @@ $layout-bgcolor-2: mix(adjust-color($primary, $saturation:100, $hue:-90), white,
   margin-right: -.7em;
   border: 0;
   background: transparent;
+  color: inherit;
 
   svg {
     display: block;
@@ -69,6 +70,7 @@ $layout-bgcolor-2: mix(adjust-color($primary, $saturation:100, $hue:-90), white,
     stroke-linecap: square;
     width: 1.5em;
     height: 1.5em;
+    stroke-color: currentColor;
   }
 }
 main {
