@@ -19,8 +19,9 @@ $layout-bgcolor-2: mix(adjust-color($primary, $saturation:100, $hue:-90), white,
 }
 .site-header {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-size: .85em;
 }
 .site-title,
 .site-nav {
@@ -45,8 +46,6 @@ $layout-bgcolor-2: mix(adjust-color($primary, $saturation:100, $hue:-90), white,
   }
 }
 .site-nav {
-  display: none;
-
   &,
   a {
     padding-top: .75em;
@@ -58,6 +57,7 @@ $layout-bgcolor-2: mix(adjust-color($primary, $saturation:100, $hue:-90), white,
   }
 }
 .mobile-menu-toggle {
+  display: none;
   padding: .4em .7em;
   margin-right: -.7em;
   border: 0;
@@ -94,16 +94,12 @@ main {
   .layout {
     flex-direction: row;
   }
-  .site-header {
-    //width: 20%;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  .site-nav {
-    display: block;
-  }
-  .mobile-menu-toggle {
-    display: none;
+
+}
+@include media-breakpoint-down(sm) {
+
+  .site-footer {
+    padding-bottom: $layout-spacer * 2;
   }
 
 }
