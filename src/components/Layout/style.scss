@@ -5,7 +5,7 @@ $layout-bgcolor-1: mix(adjust-color($primary, $saturation:100, $hue:-10), white,
 $layout-bgcolor-2: mix(adjust-color($primary, $saturation:100, $hue:-90), white, 8);
 
 .layout {
-  min-height: 100vh;
+  min-height: var(--windowInnerHeight);
   display: flex;
   flex-direction: column;
   color: $primary;
